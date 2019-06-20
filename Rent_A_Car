@@ -50,13 +50,13 @@ while True:
 
     userInput = int(input())
 
-    if userInput is 1:
+    if userInput == 1:
         carYard.carYardCarsAvailable()
-    elif userInput is 2:
+    elif userInput == 2:
         rentCar = buyer.buyerRentCar()
         carYard.carYardRentCar(rentCar)
-    elif userInput is 3:
+    elif userInput == 3:
         rentCarReturn = buyer.buyerReturnCar()
         carYard.carYardReturnCar(rentCarReturn)
-    elif userInput is 4:
+    elif userInput == 4:
         quit()
