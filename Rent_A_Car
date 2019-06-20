@@ -1,0 +1,62 @@
+# class for Car_Yard
+class CarYard():
+
+    def __init__(self, listOfCars):
+        self.availableCars = listOfCars
+
+    def carYardCarsAvailable(self):
+        print("Available Cars: ")
+        for car in self.availableCars:
+            print(car)
+
+    def carYardRentCar(self, rentCar):
+        if rentCar in self.availableCars:
+            print("Congratulations on renting your new car, here\'s the keys")
+            self.availableCars.remove(rentCar)
+        else:
+            print("We currently don't have that car in our yard")
+
+    def carYardReturnCar(self, rentCarReturn):
+        self.availableCars.append(rentCarReturn)
+        print("You have returned the car. Thank You!")
+
+
+# class for Buyer and his/hers actions
+class Buyer():
+
+    def buyerRentCar(self):
+        print("Which car would you like to rent out?" )
+        self.car = input()
+        return self.car
+
+    def buyerReturnCar(self):
+        print("Which car would you like to return? ")
+        self.car = input()
+        return self.car
+
+
+# create objects from class and pass a list of cars to the car yard
+carYard = CarYard (['Mazda','Holden','Ford','Porsche','Honda','VW','Toyota','Kia'])
+buyer = Buyer()
+
+# infinite loop
+while True:
+    print()
+    print("Enter 1 to see our wide range of cars")
+    print("Enter 2 to rent a car")
+    print("Enter 3 to return a car")
+    print("Enter 4 to leave the rental yard")
+    print()
+
+    userInput = int(input())
+
+    if userInput is 1:
+        carYard.carYardCarsAvailable()
+    elif userInput is 2:
+        rentCar = buyer.buyerRentCar()
+        carYard.carYardRentCar(rentCar)
+    elif userInput is 3:
+        rentCarReturn = buyer.buyerReturnCar()
+        carYard.carYardReturnCar(rentCarReturn)
+    elif userInput is 4:
+        quit()
