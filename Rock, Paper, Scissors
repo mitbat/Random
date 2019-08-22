@@ -1,0 +1,35 @@
+import random 
+import time
+
+# variable that creates a random choice between the three options
+Computer = random.choice(["Rock","Paper","Scissors"])
+
+# loops through until there is a result
+while True:
+	Player = input("Select (1) Rock, (2) Paper, (3) Scissors : ")
+	
+	if Player == "Rock" and Computer == "Rock":
+		print ("You Chose " + Player + " and the computer chose " + Computer + " Try Again!")
+	elif Player == "Rock" and Computer == "Paper":
+		print ("You chose " + Player + " and the computer chose " + Computer + " Computer Wins!")
+	elif Player == "Rock" and Computer == "Scissors":
+		print ("You chose " + Player + " and the computer chose " + Computer + " Player Wins!")
+
+
+	elif Player == "Paper" and Computer == "Paper":
+		print ("You chose " + Player + " the computer chose " + Computer +" Try Again!")
+	elif Player == "Paper" and Computer == "Scissors":
+		print ("You chose " + Player + " and the computer chose " + Computer + " Computer Wins!")
+	elif Player == "Paper" and Computer == "Rock":
+		print ("You chose " + Player + " and the computer chose " + Computer + " Player Wins!")
+
+	elif Player == "Scissors" and Computer == "Scissors":
+		print ("You chose " + Player + " and the computer chose " + Computer + " Try Again!")
+	elif Player == "Scissors" and Computer == "Paper":
+		print ("You chose " + Player + " and the computer chose " + Computer + " Player Wins!")
+	elif Player == "Scissors" and Computer == "Rock":
+		print ("You chose " + Player + " and the computer chose " + Computer + " Computer Wins!")
+
+	# once the program ends break the while loop
+	break
+
